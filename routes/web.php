@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AmazonItemMappingController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ChangePasswordController;
 use App\Http\Controllers\HomeController;
@@ -36,6 +37,7 @@ Route::middleware(['auth', 'decrypt'])->group(function () {
 
     Route::prefix('mapping')->name('mapping.')->group(function () {
         Route::get('customer', [MappingController::class, 'Customer'])->name('customer');
+        Route::resource('amazon-item-mapping', AmazonItemMappingController::class);
     });
 
     Route::get('change-password', [ChangePasswordController::class,'index'])->name('change.password');
