@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ChangePasswordController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MappingController;
 use App\Http\Controllers\QuickbookAuthController;
 use Illuminate\Support\Facades\Route;
 use Rap2hpoutre\LaravelLogViewer\LogViewerController;
@@ -32,6 +33,10 @@ Route::middleware(['auth', 'decrypt'])->group(function () {
     // quickbook
     Route::get('/quickbook/auth', [QuickbookAuthController::class, 'auth'])->name('quickbook.auth');
     Route::get('/quickbook/configure', [QuickbookAuthController::class, 'configure'])->name('quickbook.configure');
+
+    Route::prefix('mapping')->name('mapping.')->group(function () {
+        Route::get('customer', [MappingController::class, 'Customer'])->name('customer');
+    });
 
     Route::get('change-password', [ChangePasswordController::class,'index'])->name('change.password');
     Route::post('change-password-store', [ChangePasswordController::class,'store'])->name('change.password.store');
