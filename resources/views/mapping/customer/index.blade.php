@@ -17,7 +17,29 @@
         <div class="col-lg-12">
             <div class="card card-custom card-stretch gutter-b">
                 <div class="card-body">
-                    <p class="mb-0">Coming Soon</p>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul class="nav nav-tabs nav-tabs-line nav-tabs-line-3x">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#amazone">Amazone</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#shopify">Shopify</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#ebay">eBay</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content mt-5" id="myTabContent">
+                                <div class="tab-pane fade show active" id="amazone" role="tabpanel"
+                                    aria-labelledby="shopify">Tab content 1</div>
+                                <div class="tab-pane fade" id="shopify" role="tabpanel"
+                                    aria-labelledby="kt_tab_pane_2">Tab content 2</div>
+                                <div class="tab-pane fade" id="ebay" role="tabpanel"
+                                    aria-labelledby="kt_tab_pane_2">Tab content 3</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
